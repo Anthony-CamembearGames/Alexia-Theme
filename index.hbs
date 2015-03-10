@@ -1,0 +1,44 @@
+{{!< default}}
+{{> header}}
+<main class="main_alexia" role="main">
+
+{{#foreach posts}}
+<article class="article_alexia" role="article" itemscope itemtype="http://schema.org/Article">
+<header class="postheader_alexia">
+<time class="date_alexia" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+<h1 class="posttitle_alexia" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
+</header>
+
+<div class="postcontent_alexia" itemprop="articleBody">
+
+        {{#if image}}
+        <div class="post_image_alexia"><img src="{{image}}" itemprop="image" /></div>
+        {{/if}}
+
+{{content words="100"}}
+
+<div class="read_more_alexia">
+<p><a href="{{{url}}}" class="link_read_more_alexia">Read more</a></p>
+</div>
+
+</div>
+{{#if tags}}
+<div class="posttags_alexia">
+Tags: {{tags separator=" | "}}
+</div>
+
+
+
+{{/if}}
+</article>
+{{/foreach}}
+
+
+{{#if pagination}}
+<div class="pagination_alexia">
+{{{pagination}}}
+</div>
+{{/if}}
+</main>
+{{> footer}}
+

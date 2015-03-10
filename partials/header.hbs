@@ -1,0 +1,22 @@
+<div role='banner' class="header_alexia">
+{{#if @blog.logo}}<a class="logo_alexia" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+
+<div class="title_and_header">
+
+<h1 class="blogtitle_alexia">
+<a title="{{@blog.title}}" href='{{@blog.url}}'>
+{{{@blog.title}}}
+</a>
+</h1>
+
+<p class="blogdescription_alexia">
+<a title="{{@blog.title}}" href='{{@blog.url}}'>
+{{@blog.description}}
+</a>
+</p>
+
+</div>
+<div class="alexia_nav">
+{{navigation}}
+</div>
+</div>

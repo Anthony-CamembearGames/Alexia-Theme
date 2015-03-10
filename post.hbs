@@ -1,0 +1,42 @@
+{{!< default}}
+{{> header}}
+<main class="main_alexia" role="main">
+{{#post}}
+<article class="article_alexia" role="article" itemscope itemtype="http://schema.org/Article">
+<header class="postheader_alexia">
+<time class="date_alexia" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+<h1 class="posttitle_alexia" itemprop="headline">{{title}}</h1>
+</header>
+<div class="postcontent_alexia" itemprop="articleBody">
+{{content}}
+</div>
+{{#if tags}}
+<div class="posttags_alexia">
+Tags: {{tags separator=" | "}}
+</div>
+{{/if}}
+        {{#if author}}
+        <footer class="postfooter_alexia">
+        <address itemscope itemtype="http://schema.org/Person">
+        {{#if author.image}}
+        <div class="authorimage_alexia"><img src="{{author.image}}" itemprop="image" /></div>
+        {{/if}}
+        <h4 class="authorname_alexia"><span itemprop="author">{{author.name}}</span></h4>
+        {{#if author.website}}
+        <div class="authorwebsite_alexia"><a href="{{author.website}}" itemprop="url">{{author.website}}</a></div>
+        {{/if}}
+        </address>
+        <div class="authorbio_alexia">
+        <p>{{author.bio}}</p>
+        </div>
+        </footer>
+        {{/if}}
+</article>
+{{/post}}
+{{#if pagination}}
+<div class="pagination_alexia">
+{{{pagination}}}
+</div>
+{{/if}}
+</main>
+{{> footer}}
