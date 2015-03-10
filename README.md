@@ -17,8 +17,11 @@ A colorfull space inspired theme that uses the navigation option of the Ghost bl
 ### Acknowledgements
 
 Font used for the title : http://typodermicfonts.com/nasalization/
+
 Background image : http://webtreats.mysitemyway.com/tileable-classic-nebula-space-patterns/
+
 Code styling : https://highlightjs.org/
+
 This themed was built using the very good tutorial found here : http://webdesign.tutsplus.com/series/building-a-ghost-theme-from-scratch--webdesign-16179
 
 ### Disclamer
